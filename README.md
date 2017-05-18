@@ -18,14 +18,16 @@ python main.py
 deactivate
 ```
 
-## Use case
+## Use cases
 Suppose you have a specific kind of dataset and you want to compare the efficiency of various sorting algorithms. You want to know whether binary trees are better worse than hashtables. You want to compare which implementation of code is faster, or maybe what runs faster *on* Python. If you have that kind of need then this repo is for you.
 
 As an example, [functions.py](/functions.py) contains various implementations of [insertion sort algorithm](https://en.wikipedia.org/wiki/Insertion_sort). For most part, they are the same but each of them contains a crucial difference which marks the thing that we want to compare.
 
-## Used statistical tests
+## Statistical approaches
+* Computation of z-score.
+* Visual representation of data (uncommend [this](https://github.com/underscoredam/benchmark-functions-python/blob/master/main.py#L80) line).
 * Outlier fix. Anything not within -OUTLIER_MARGIN \< z_score  \< +OUTLIER_MARGIN is considered an outlier.
-* 1-way ANOVA is used to calculate t\* score and p-value. 
+* 1\-way ANOVA is used to calculate t\* score and p-value. 
 
 ## Tips
 * The more the p-value, the more likely that the functions perform similarly.
