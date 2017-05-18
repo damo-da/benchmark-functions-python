@@ -1,6 +1,8 @@
 # benchmark-functions-python
 Compare multiple Python functions and statistically compare their speeds
 
+![Screenshot](/screenshot.png)
+
 ## Requirements and Installation
 * Install Python 3 and virtualenv. Then run the following:
 ``` bash
