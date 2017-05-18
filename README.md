@@ -26,16 +26,20 @@ Suppose you have a specific kind of dataset and you want to compare the efficien
 As an example, [functions.py](/functions.py) contains various implementations of [insertion sort algorithm](https://en.wikipedia.org/wiki/Insertion_sort). For most part, they are the same but each of them contains a crucial difference which marks the thing that we want to compare.
 
 ## Statistical approaches
-* Computation of z-score.
+* Compute mean and variance
+* Compte z-score.
 * Visual representation of data (uncommend [this](https://github.com/underscoredam/benchmark-functions-python/blob/master/main.py#L80) line).
-* Outlier fix. Anything not within -OUTLIER_MARGIN \< z_score  \< +OUTLIER_MARGIN is considered an outlier.
+* Outlier fix. Anything not within -OUTLIER\_MARGIN \< z\-score  \< +OUTLIER\_MARGIN is considered an outlier.
 * 1\-way ANOVA is used to calculate t\* score and p-value. 
 
 ## Tips
 * The more the p-value, the more likely that the functions perform similarly.
 * The lesser the p-value, the more likely that one founction outperforms another.
 * Don't forget to read the annotations for `compare()` in `main.py`. 
-* And if you want to run the batch processor (`runner.bash`), 
+* And if you want to run the batch processor (`runner.bash`), change the second range of `runner.bash`, from `0` to the total number of tests that you're running.
 
 ## Author
 Damodar Dahal
+
+## License
+The MIT License.

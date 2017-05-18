@@ -33,7 +33,7 @@ def compute(*funs: "List of functions to compare",
         iterations: "The number of iterations to run" = 10):
     """Compute a statistical analysis and test whether each functions are equivalent.
 
-    Each fun() inside funs is called exactly number*iterations times.
+    Each fun() in funs is called exactly (number*iterations) times.
     Each fun() should return outputs that have equaivalent JSON value.
     Each fun() should NOT take any parameter. If they need to, cover using a lambda expression.
     """
