@@ -3,11 +3,15 @@ Compare multiple Python functions and statistically compare their speeds
 
 ![Screenshot](/screenshot.png)
 
+## Interpreter support
+* Python 3
+* Python 2
+* ~PyPy~ (`scipy` is incompatible with `PyPy`)
+
 ## Requirements and Installation
-* Install Python 3 and virtualenv. Then run the following:
+* Install Python and [`virtualenv`](https://virtualenv.pypa.io/en/stable/). Then run the following:
 ``` bash
 #/bin/bash
-
 cd <directory>
 virtualenv bfs
 source bfs/bin/activate
