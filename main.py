@@ -1,3 +1,4 @@
+from __future__ import print_function, nested_scopes, generators, division
 import timeit
 from functions import sort0, sort1, sort2, sort3, sort4, sort5
 import statistics as st
@@ -28,15 +29,22 @@ def sc_plot(l):
     plt.scatter(list(range(len(l))), [x/mean for x in l])
     plt.show()
 
-def compute(*funs: "List of functions to compare", 
-        number: "The parameter for timeit" = 10000, 
-        iterations: "The number of iterations to run" = 10):
+def compute(*funs, **kwargs):
     """Compute a statistical analysis and test whether each functions are equivalent.
+
+    param funs: List of functions to compare
+    param number: The parameter for timeit
+    param iterations: The number of iterations to run
 
     Each fun() in funs is called exactly (number*iterations) times.
     Each fun() should return outputs that have equaivalent JSON value.
     Each fun() should NOT take any parameter. If they need to, cover using a lambda expression.
     """
+
+    ## Due to lack of support for (*args, number=10000, iterations=10) in py2, 
+    # I was forced to do this. See https://stackoverflow.com/a/5940226
+    number = kwargs.pop('number', 10000)
+    iterations = kwargs.pop('iterations', 10)
 
     # Read the print message below
     print("Ensuring that each function returns the same thing...")
